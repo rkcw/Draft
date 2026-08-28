@@ -8,22 +8,18 @@ This task will focus on testing your skills on:
 - Array Manipulation
 - C String
 
-## Background
-
 This task is mainly focused ~~(loosely based)~~ on data validation (Similar concepts will be very useful when you deal with sensors later on).
 
-## Task Details
+## Part A: Parametrised validation
 
-### Part A: Parametrised validation
-
-### i) Password checker
+## i) Password checker
 
 We will start with some sort of warmup.
 
->```int password_check(char* password)```  
->Complete the function above in `Task1.c`.
+```int password_check(char* password)```  
+Complete the function above in `Task1.c`.
 
-The function will process the C string `password` and return 0 or 1 based on whether the password is valid or not.
+>The function will process the C string `password` and return 0 or 1 based on whether the password is valid or not.
 
 The following requirements must be fulfilled:
 
@@ -37,7 +33,7 @@ The following requirements must be fulfilled:
   - Hint: If you didn't notice, they are all valid ASCII characters.
 - If any of the above **4** conditions are violated, return `0`, else return `1`.
 
-#### Examples
+### Examples
 
 >Invalid passwords (return 0)
 
@@ -55,12 +51,12 @@ The following requirements must be fulfilled:
 - S0ftwareTutorial*
 - H3!!0world
 
-#### Assumptions
+### Assumptions
 
 - All test cases will only use valid ASCII characters.
 - The test cases will be at most 512 characters long.
 
-### ii) Email checker
+## ii) Email checker
 
 This one will have slightly more complicated rules, but does the same thing basically.
 
@@ -72,13 +68,13 @@ The function will also print out the email address the mail is sent to.
 
 Disclaimer: some of the parts of the rules is kinda obsolete in the official modern standards, but it'll be fun to test your skills :\)
 
-#### Rules (The rules are loosely based on the actual RFC 5322 standards.)
+### Rules (The rules are loosely based on the actual RFC 5322 standards.)
 
-#### Validation
+### Validation
 
 The email address must follow the format of `<local-part>@<domain>`, where the `<>` can be replaced by a string of characters.
 
-##### \<local-part\>
+#### \<local-part\>
 
 >The `local-part` of an email address basically indicates who the email will be sent to (basically the receiver of the email).  
 >The email sent to the email address will be sent to the mailbox with the name indicated in `local-part`, after removing quotes, tags, and comments (those will be mentioned later).
@@ -114,7 +110,7 @@ Tags:
 - The contents of the tag must also follow the restrictions of the unquoted part.
 - Tags are not a part of the mailbox, and will be removed during the output phase. The contents of the tag must also follow the restrictions of the unquoted part.
 
-##### \<domain\>
+#### \<domain\>
 
 >The `domain` of an email address is basically the address of the receiver.
 
@@ -129,7 +125,7 @@ The `domain` must follow the rules below:
   - Subdomains must be at most 63 characters. (<=63)
   - The last subdomain (the most right most one, also known as the top-level domain) must be at least 2 characters long, and can only include letters.
 
-#### Output
+### Output
 
 >The output of the function should clearly output the mailbox and domain of the email address.
 
@@ -169,7 +165,7 @@ If the input is `hello@world.123` (invalid due to the top-level domain rule)
 The email hello@world.123 is invalid.
 ```
 
-##### Comments
+#### Comments
 
 Comments can be included in the email address, in both the local-part and the domain part, but not across.  
 They are defined by starting with a `(` character, and ending with a `)` character.  
@@ -194,3 +190,7 @@ The email "foo+bar(n)"@abc.com.uk is valid.
 Mailbox: foo+bar(n)
 Domain: abc.com.uk
 ```
+
+## Part B
+
+## i) Regex Expressions
