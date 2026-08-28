@@ -20,9 +20,8 @@ This task is mainly focused ~~(loosely based)~~ on data validation (Similar conc
 
 We will start with some sort of warmup.
 
-```int password_check(char* password)```
-
-Complete the function above in `Task1.c`.
+>```int password_check(char* password)```  
+>Complete the function above in `Task1.c`.
 
 The function will process the C string `password` and return 0 or 1 based on whether the password is valid or not.
 
@@ -40,7 +39,7 @@ The following requirements must be fulfilled:
 
 #### Examples
 
-Invalid passwords (return 0)
+>Invalid passwords (return 0)
 
 - `Abc123!`
   - Too short (7 characters long)
@@ -51,7 +50,7 @@ Invalid passwords (return 0)
 - `He!l0 world`
   - Whitespace is not a valid special character
 
-Valid passwords (return 1)
+>Valid passwords (return 1)
 
 - S0ftwareTutorial*
 - H3!!0world
@@ -65,9 +64,8 @@ Valid passwords (return 1)
 
 This one will have slightly more complicated rules, but does the same thing basically.
 
-```int email_check(char* email)```
-
-Complete the function above in `Task1.c`.
+>```int email_check(char* email)```  
+>Complete the function above in `Task1.c`.
 
 The function will process a C string `email` and return 0 or 1 based on whether the email is valid or not.
 The function will also print out the email address the mail is sent to.
@@ -82,8 +80,8 @@ The email address must follow the format of `<local-part>@<domain>`, where the `
 
 ##### \<local-part\>
 
-The `local-part` of an email address basically indicates who the email will be sent to (basically the receiver of the email).
-The email sent to the email address will be sent to the mailbox with the name indicated in `local-part`, after removing quotes, tags, and comments (those will be mentioned later).
+>The `local-part` of an email address basically indicates who the email will be sent to (basically the receiver of the email).  
+>The email sent to the email address will be sent to the mailbox with the name indicated in `local-part`, after removing quotes, tags, and comments (those will be mentioned later).
 
 The `local-part` must follow the rules below:
 
@@ -118,7 +116,7 @@ Tags:
 
 ##### \<domain\>
 
-The `domain` of an email address is basically the address of the receiver.
+>The `domain` of an email address is basically the address of the receiver.
 
 The `domain` must follow the rules below:
 
@@ -133,7 +131,7 @@ The `domain` must follow the rules below:
 
 #### Output
 
-The output of the f
+>The output of the function should clearly output the mailbox and domain of the email address.
 
 The function should output the following: (if the input of the function is `username@email.com`)
 
