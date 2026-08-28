@@ -9,10 +9,10 @@ There will be ***3*** main homework tasks, each focusing on a different topic.
 All tasks will be split into part A and part B: (so there's a 1A, 1B, 2A, 2B, 3A, and 3B)
 
 - Part A \(<u>***MANDATORY***</u>\):
-  - All trainees ***MUST*** finish this part to be eligible to move on.
+  - These questions will be marked, and will affect your eligibility of going to later phases.
 - Part B \(<u>***OPTIONAL/BONUS***</u>\):
   - These are extended tasks that are related to the topic.
-  - As these tasks might be a bit too hard for this tutorial, they will only act as further reference. They will be marked if you attempt them, but will **NOT** give you any additional points or whatsoever.
+  - As these tasks might be way too hard, they will only act as further reference. They will be marked if you attempt them, but will **NOT** give you any additional points or whatsoever.
 
 For all 3 tasks, you will be given a bare-bones skeleton file (and some library/helper functions) to assist you in making the program.
 
@@ -25,6 +25,7 @@ For all 3 tasks, you will be given a bare-bones skeleton file (and some library/
 - Have fun (?)
 
 - AI tools are discouraged, as the aim of this assignment is to let you get used to coding and programming using C. Using any form of AI would defeat the purpose and for this specific homework, I highly encourage you to try to think and code yourself, without having to rely on external help.
+- Obvious use of AI will negatively affect your chances of proceeding. (We have ways to tell)
 
 ## Tasks
 
@@ -36,3 +37,7 @@ Here are the following tasks and their respective topics:
   - Mini Scrabble
 - [Task 3](./Task-3/README.md):
   - Simple Convolutional Neural Network
+
+## Grading
+
+>It is completely fine to not be able to complete the homework, as it is designed to be difficult, and pushes the limits of your limited knowledge.

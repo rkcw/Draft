@@ -24,14 +24,14 @@ Complete the function above in `Task1.c`.
 The following requirements must be fulfilled:
 
 - The password must be at least **8** characters long, and no longer than **24** characters. (aka the password must be 8-24 characters long, inclusive)
-- The password **must only include**, and **must have at least 1 of the following**:
-  - Capital Letin letters (A-Z)
+- The password *must only include** the following:
+  - Capital Latin letters (A-Z)
   - Small Latin letters (a-z)
   - Digits (0-9)
-  - Valid special characters
-- Valid special characters are: `~ ! @ # $ % ^ & * ( ) - _ + = { } [ ] \ | ; : " ' < > , . / ?`
-  - Hint: If you didn't notice, they are all valid ASCII characters.
-- If any of the above **4** conditions are violated, return `0`, else return `1`.
+  - Valid special characters (`~ ! @ # $ % ^ & * ( ) - _ + = { } [ ] \ | ; : " ' < > , . / ?`)
+- The password must contain **at least one character** from **each of the four** categories above.
+  - If you didn't notice, they are all valid ASCII characters.
+- Return `1` if all conditions are met, otherwise `0`.
 
 ### Examples
 
@@ -51,24 +51,21 @@ The following requirements must be fulfilled:
 - S0ftwareTutorial*
 - H3!!0world
 
-### Assumptions
+### Assumptions (1A(i))
 
 - All test cases will only use valid ASCII characters.
-- The test cases will be at most 512 characters long.
+- The test cases will be at most 512 characters long, and will not be empty.
 
 ## ii) Email checker
 
 This one will have slightly more complicated rules, but does the same thing basically.
 
->```int email_check(char* email)```  
+>```void email_check(char* email)```  
 >Complete the function above in `Task1.c`.
 
-The function will process a C string `email` and return 0 or 1 based on whether the email is valid or not.
-The function will also print out the email address the mail is sent to.
+The function will process a C string `email` and based on whether the email address is valid or not, it outputs the validity and the parsed values of the mailbox and domain.
 
-Disclaimer: some of the parts of the rules is kinda obsolete in the official modern standards, but it'll be fun to test your skills :\)
-
-### Rules (The rules are loosely based on the actual RFC 5322 standards.)
+Disclaimer: some of the parts of the rules is kinda obsolete in the official modern standards, but it'll be fun to test your skills :\) (The rules are loosely based on the actual RFC 5322 standards.)
 
 ### Validation
 
@@ -81,7 +78,8 @@ The email address must follow the format of `<local-part>@<domain>`, where the `
 
 The `local-part` must follow the rules below:
 
-- The length of the local-part is in the range 1-64 (inclusive) (including quotations and comments)
+- The raw local-part string (the part before the @ in the input) must be 1 to 64 characters long.
+  - This length includes all outer quotation marks, backslashes, parentheses `()` and their inner content, even though these are stripped later for the final mailbox.
 - The length of the **VALID** mailbox indicated by the local-part must not be empty. (See output for definition of mailbox)
 
 **Unquoted**:
@@ -95,20 +93,27 @@ The `local-part` must follow the rules below:
 
 **Quoted**:
 
-- The local-part is definted as `quoted` if the entire string **BOTH** starts and ends with the `"` character. (e.g. `"username"@email.com`)
+- The local-part is defined as `quoted` if the entire string **BOTH** starts and ends with the `"` character. (e.g. `"username"@email.com`)
 - The following rules apply to the quoted string (the part quoted by the `"` characters excluding the outer `"` characters) when the local-part is **quoted**:
   - It may include any characters allowed in the unquoted restrictions.
   - The characters `" ( ) , : ; < > @ [ \ ]` are also allowed.
-    - For the characters `"` and `\` to be used, they must be immediately preceeded by a `\` operator. (`"user"name\lol"@email.com` is invalid, but `"user\"name\\me"@email.com` is valid.)
-    - Whitespaces are allowed if they are not immedietely preceded by the '\' operator (`\\ `@email.com is valid, but `\\\ `@email.com is valid).
-    - The `\` operator is not a part the mailbox, and will be removed during the output phase.
+    - For the characters `"` and `\` to be used, the `\` character is used as an escape operator.
+      - `\"` represents a literal `"`.
+      - `\\` represents a literal `\` (a literal backslash).
+      - `"user"name\lol"@email.com` is invalid, but `"user\"name\\me"@email.com` is valid.
+    - Whitespaces are allowed unless it is preceded by an unescaped backslash.
+      - `\\ `@email.com is valid (because the `\\` represents a literal backslash).
+      - `\\\ `@email.com is invalid (the string is parsed as `\\` + `\ `, so the whitespace is invalid).
+    - The escape operator `\` is not a part of the mailbox, and will be removed during the output phase.
 
 Tags:
 
 - Tags only exist in **unquoted local-parts** and defined by a string starting with a `+` character. (e.g. `username+tag@email.com`, where `username` is the mailbox and `tag` is the tag)
-- There can only be 1 tag in an email. (e.g. `username+tag+tag@gmail.com` has a tag of `tag+tag` instead of having 2 tags.)
-- The contents of the tag must also follow the restrictions of the unquoted part.
-- Tags are not a part of the mailbox, and will be removed during the output phase. The contents of the tag must also follow the restrictions of the unquoted part.
+- If an unquoted local-part contains a `+`, the first `+` acts as the tag delimiter.
+  - Everything before this first `+` belongs to the mailbox prefix.
+  - Everything after this first `+` is the tag (which may contain additional `+` characters).
+- The contents of the tag must also follow the restrictions of the unquoted part. (e.g  `username+ta;g@abc.com` is invalid because `;` cannot exist in unquoted local-parts.)
+- Tags are not a part of the mailbox, and will be removed during the output phase.
 
 #### \<domain\>
 
@@ -125,7 +130,7 @@ The `domain` must follow the rules below:
   - Subdomains must be at most 63 characters. (<=63)
   - The last subdomain (the most right most one, also known as the top-level domain) must be at least 2 characters long, and can only include letters.
 
-### Output
+### Outputs (1A(ii))
 
 >The output of the function should clearly output the mailbox and domain of the email address.
 
@@ -167,7 +172,11 @@ The email hello@world.123 is invalid.
 
 #### Comments
 
-Comments can be included in the email address, in both the local-part and the domain part, but not across.  
+Comments can be included in the email address, in both the local-part and the domain part.
+
+- `(hello)username@domain.com` is treated like `username@domain.com`.
+- `user(hello)name@domain.com` is also valid, and is treated as `username@domain.com`. (The comment is removed, and the remaining parts are concatenated.)
+
 They are defined by starting with a `(` character, and ending with a `)` character.  
 Comments cannot exist within quoted local-parts. (For the email `"user(n)ame"@email.com`, the `(n)` is not treated as a comment, but as a literal string.)
 
@@ -183,14 +192,100 @@ Mailbox: fun
 Domain: yahoo.com
 ```
 
-Input: `"foo+bar(n)"@abc.com.uk`
+Input: `"foo+bar(n)"@abc.co.uk`
 
 ```console
-The email "foo+bar(n)"@abc.com.uk is valid.
+The email "foo+bar(n)"@abc.co.uk is valid.
 Mailbox: foo+bar(n)
-Domain: abc.com.uk
+Domain: abc.co.uk
 ```
 
-## Part B
+### Assumptions (1A(ii))
 
-## i) Regex Expressions
+- All test cases will be at most 500 characters long.
+- The test cases will only use valid ASCII characters.
+
+## Part B: Modified Regex
+
+## i) Custom regex on letters
+
+Regex, also known as regular expressions, is a string of characters that indicates a pattern in a string/input. It is regularly used in data validation that includes strings.  
+>For this bonus task, you are required to parse a regex, and print out strings that follows the patterns.
+
+`void regex(char** list, char* regex)`  
+Complete the function provided in Task1.h
+
+List will contain an array of C strings (single word, null terminated, no whitespaces), each of varying length. The function will print out all the strings in the list that satisfies the regex (in the same order of the list).  
+
+### Regex metacharacters
+
+>The test cases will only include the metacharacters listed.
+
+| Expression | Name | What it does | Example Match |
+| :--- | :--- | :--- | :--- |
+| `.` | Dot (Wildcard) | Matches **any single character** | `c.t` matches `"cat"`, `"cut"`, and `"c7t"`. |
+| `[abc]` | Custom Set | Matches exactly **one** character from the list inside. | `h[aeiou]llo` matches `"e"` in `"hello"`. |
+| `[^abc]` | Negated Set | Matches exactly **one** character **not** in the list. | `[^aeiou]ello` matches `"h"` in `"hello"`. |
+| `[a-z]` | Range | Matches one character within the alphabetical/numerical range. | `[a-z]ello` matches `"h"` in `"hello"`. |
+| `*` | Star (0 or more) | Matches **0 or more** repetitions. | `ca*t` matches `"ct"`, `"cat"`, and `"caat"`. |
+| `+` | Plus (1 or more) | Matches **1 or more** repetitions. | `ca+t` matches `"cat"` and `"caat"`, but **not** `"ct"`. |
+| `?` | Question (0 or 1) | Matches **0 or 1** repetition (makes it optional). | `colou?r` matches `"color"` and `"colour"`. |
+| `{n}` | Exact | Matches exactly **n** times. | `a{3}` matches `"aaa"` but not `"aa"`. |
+| `{n,}` | At least n | Matches **n or more** times. | `a{2,}` matches `"aa"` and `"aaaaa"`. |
+| `{n,m}` | Between | Matches between **n** and **m** times. | `a{2,4}` matches `"aa"`, `"aaa"`, and `"aaaa"`. |
+| `(abc)` | Capturing Group | Treats inside as one unit.\* | `(ha)+` matches `"ha"`, `"haha"`, `"hahaha"`. |
+
+\*Groups ( ... ) can contain any combination of other metacharacters (dots, character classes, quantifiers, and even nested groups, though nested groups will not appear in the test cases). The group acts as a single unit for the quantifiers that follow it.  
+
+**NOTE**: In this task, the entire string must match the regex. So, `e.t` would match `eat` but not `beat` or `underneath`.
+
+### Output (1B(i))
+
+Here are a few examples.  
+
+Input: list = {"cat", "cot", "cow", "cut", "mop", "mart", "cart", "content"}, regex = "c.*t"
+
+```console
+Regex = c.*t
+Results:
+cat
+cot
+cut
+cart
+content
+```
+
+Input: list = {"dog", "dodog", "dododog", "dg", "dag", "do", "g"}, regex = "(do)+g"
+
+```console
+Regex = (do)+g
+Results:
+dog
+dodog
+dododog
+```
+
+Input: list = {"cat", "cut", "cot", "cbt", "c0t", "ct"}, regex = "c[^a]t"
+
+```console
+Regex = c[^a]t
+Results:
+cut
+cot
+cbt
+c0t
+```
+
+list = {"bat", "bath", "baths", "b", "ba", "battles"}, regex = "b[a-z]{2,3}"
+
+```console
+Regex = b[a-z]{2,3}
+Results:
+bat
+bath
+```
+
+### Assumptions (1B(i))
+
+- All strings within list only contain small Latin letters (aka lowercase letters, a-z).
+- You may assume that the list and regex will not be empty, and the regex is always valid (no incorrect syntax).

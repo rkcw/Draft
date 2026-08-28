@@ -7,8 +7,9 @@
 
 enum tasks{
     QUIT,
-    FUNC_1,
-    FUNC_2,
+    PASSWORD,
+    EMAIL,
+    REGEX,
     FUNC_COUNT,
 };
 
@@ -24,11 +25,11 @@ int main(){
         int in=0;
         scanf("%d", &in);
         switch (in){
-            case 1:
+            case PASSWORD:
                 break;
-            case 2:
+            case EMAIL:
                 break;
-            case 3:
+            case REGEX:
                 break;
             case QUIT:
                 printf("Terminating program...");
