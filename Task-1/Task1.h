@@ -7,6 +7,6 @@ int password_check(char* password);
 void email_check(char* email);
 
 //PART B (OPTIONAL)
-void regex(char** list, char* regex, char* list)
+void regex(char** list, char* regex);
 
 #endif

@@ -207,7 +207,7 @@ Domain: abc.co.uk
 
 ## Part B: Modified Regex
 
-## i) Custom regex on letters
+## i) Custom Regex on Letters
 
 Regex, also known as regular expressions, is a string of characters that indicates a pattern in a string/input. It is regularly used in data validation that includes strings.  
 >For this bonus task, you are required to parse a regex, and print out strings that follows the patterns.
