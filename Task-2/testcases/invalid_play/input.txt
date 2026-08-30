@@ -1,0 +1,5 @@
+LOAD
+testcases/invalid_play/state.txt
+PLAY
+YEA L11 V
+QUIT

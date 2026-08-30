@@ -1,0 +1,2 @@
+# anagram_ab: rack "AB" -> both 2-letter words AB and BA.
+Words from rack: AB BA

@@ -1,0 +1,3 @@
+# exchange_invalid: exchanging "Z" (not in rack "ABC") must be rejected.
+P1=0, P2=0, turn 1.
+Invalid exchange: one of those tiles is not in your rack.

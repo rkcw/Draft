@@ -7,6 +7,7 @@ This task will focus on testing your skills on:
 - Basic C (loop and if conditions)
 - Array Manipulation
 - C String
+- Pointers
 
 This task is mainly focused ~~(loosely based)~~ on data validation (Similar concepts will be very useful when you deal with sensors later on).
 
@@ -223,7 +224,7 @@ List will contain an array of C strings (single word, null terminated, no whites
 
 | Expression | Name | What it does | Example Match |
 | :--- | :--- | :--- | :--- |
-| `.` | Dot (Wildcard) | Matches **any single character** | `c.t` matches `"cat"`, `"cut"`, and `"c7t"`. |
+| `.` | Dot (Wildcard) | Matches **any single character** | `c.t` matches `"cat"`, `"cut"`, and `"cot"`. |
 | `[abc]` | Custom Set | Matches exactly **one** character from the list inside. | `h[aeiou]llo` matches `"e"` in `"hello"`. |
 | `[^abc]` | Negated Set | Matches exactly **one** character **not** in the list. | `[^aeiou]ello` matches `"h"` in `"hello"`. |
 | `[a-z]` | Range | Matches one character within the alphabetical/numerical range. | `[a-z]ello` matches `"h"` in `"hello"`. |
@@ -238,6 +239,13 @@ List will contain an array of C strings (single word, null terminated, no whites
 \*Groups ( ... ) can contain any combination of other metacharacters (dots, character classes, quantifiers, and even nested groups, though nested groups will not appear in the test cases). The group acts as a single unit for the quantifiers that follow it.  
 
 **NOTE**: In this task, the entire string must match the regex. So, `e.t` would match `eat` but not `beat` or `underneath`.
+
+### How Regex works
+
+The metacharacter work like building blocks, and they will correspond to characters in a string. You can also mix and match the operators to create different filters/matches.  
+
+Something like `c.t` would match to any string that has `c` as its first character, and `t` as its third character. Since `.` is the wildcard operator, it can match to any character. So, examples that match to `c.t` is `cat`, `cot`, `cut`, and even `cvt` (it doesn't have to be a valid word).  
+You can also mix and match operators, like `([^aeiou][aeiou])+[^aeiou]?` looks for all strings with starts with a consonant, and halternates vowels and consonants. (e.g `no`, `cane`, `bat`, `babababababababababa`)
 
 ### Output (1B(i))
 

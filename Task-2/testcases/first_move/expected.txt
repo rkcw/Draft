@@ -1,0 +1,4 @@
+# first_move: HIGH on an empty board with rack "JET".
+# The best first move must pass through the centre and score 20 (double word).
+P1=0, P2=0, turn 1.
+Suggested move: JET F8 H (20)

@@ -1,0 +1,5 @@
+LOAD
+testcases/wildcard_play/state.txt
+PLAY
+CAT H8 H
+QUIT

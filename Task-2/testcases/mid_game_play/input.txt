@@ -1,0 +1,5 @@
+LOAD
+testcases/mid_game_play/state.txt
+PLAY
+BE M2 V
+QUIT

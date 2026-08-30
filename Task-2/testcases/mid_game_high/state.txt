@@ -1,0 +1,21 @@
+# Test: mid-game board, Player 2 to move with a single "E".
+# Expect HIGH to suggest BE M2 V for 8 points.
+.P.....D......O
+.E.....O.FOBBED
+.ER....U.I....I
+.OH.DIOXANEs..C
+.YEWEN...A.E...
+..U..D...L.I...
+..M..U...i.G..J
+...FRIZERS.N..O
+...A.NA..M.O..L
+.A.V.G.QIS.R.RE
+.V.UT.....KYLE.
+.A.SI........L.
+.T..G.OSTINATI.
+.A..H..E.....T.
+WRAPT..C.......
+RACK2 E
+SCORE1 378
+SCORE2 413
+TURN 2

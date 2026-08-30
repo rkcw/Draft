@@ -34,7 +34,7 @@ Here are the following tasks and their respective topics:
 - [Task 1](./Task-1/README.md):
   - Data Validation
 - [Task 2](./Task-2/README.md):
-  - Mini Scrabble
+  - Scrabble
 - [Task 3](./Task-3/README.md):
   - Simple Convolutional Neural Network
 

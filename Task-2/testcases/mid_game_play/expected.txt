@@ -1,0 +1,4 @@
+# mid_game_play: PLAY BE M2 V should be accepted and score 8 (413 -> 421).
+P1=378, P2=413, turn 2.
+Player 2: 421 points
+!Invalid move

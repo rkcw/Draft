@@ -1,0 +1,5 @@
+LOAD
+testcases/exchange_invalid/state.txt
+EXCH
+Z
+QUIT

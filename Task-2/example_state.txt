@@ -1,0 +1,31 @@
+# Mini Scrabble debug state
+# Load this in the game with the LOAD menu option (or call import_state).
+#
+# Format:
+#   - 15 board rows (top to bottom), each exactly 15 cells.
+#     '.' (or ' ') = empty, A-Z = placed tile, a-z = wildcard letter.
+#   - Optional key lines after the board: RACK1/RACK2, SCORE1/SCORE2,
+#     TURN, BAG.
+#   - '#' starts a comment; blank lines are ignored.
+#
+# This example is the board from the earlier game (P2 to move, rack "E").
+.P.....D......O
+.E.....O.FOBBED
+.ER....U.I....I
+.OH.DIOXANEs..C
+.YEWEN...A.E...
+..U..D...L.I...
+..M..U...i.G..J
+...FRIZERS.N..O
+...A.NA..M.O..L
+.A.V.G.QIS.R.RE
+.V.UT.....KYLE.
+.A.SI........L.
+.T..G.OSTINATI.
+.A..H..E.....T.
+WRAPT..C.......
+RACK1 N
+RACK2 E
+SCORE1 378
+SCORE2 413
+TURN 2

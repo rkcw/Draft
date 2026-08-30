@@ -1,0 +1,3 @@
+# mid_game_high: Player 2 holds a single "E"; the best move is BE M2 V for 8.
+P1=378, P2=413, turn 2.
+Suggested move: BE M2 V (8)

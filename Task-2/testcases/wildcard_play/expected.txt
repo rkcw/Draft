@@ -1,0 +1,5 @@
+# wildcard_play: rack "*AT" plays CAT; the wildcard C is shown lowercase on the
+# board and the word scores 10 (centre double word).
+P1=0, P2=0, turn 1.
+Player 1: 10 points
+| c | A | T |

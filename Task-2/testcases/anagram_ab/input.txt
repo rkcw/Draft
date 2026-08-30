@@ -1,0 +1,4 @@
+LOAD
+testcases/anagram_ab/state.txt
+ANAG
+QUIT

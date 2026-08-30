@@ -1,0 +1,4 @@
+LOAD
+testcases/first_move/state.txt
+HIGH
+QUIT

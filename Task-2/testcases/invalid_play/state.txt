@@ -1,0 +1,21 @@
+# Test: YEA L11 V is invalid -- L10 already holds R, so it would form RYEA.
+# Expect the game to print "Invalid move".
+.P.....D......O
+.E.....O.FOBBED
+.ER....U.I....I
+.OH.DIOXANEs..C
+.YEWEN...A.E...
+..U..D...L.I...
+..M..U...i.G..J
+...FRIZERS.N..O
+...A.NA..M.O..L
+.A.V.G.QIS.R.RE
+.V.UT.....KYLE.
+.A.SI........L.
+.T..G.OSTINATI.
+.A..H..E.....T.
+WRAPT..C.......
+RACK2 E
+SCORE1 378
+SCORE2 413
+TURN 2

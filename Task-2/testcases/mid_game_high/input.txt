@@ -1,0 +1,4 @@
+LOAD
+testcases/mid_game_high/state.txt
+HIGH
+QUIT

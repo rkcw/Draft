@@ -1,0 +1,4 @@
+# invalid_play: YEA L11 V must be rejected (L10 holds R, which would form RYEA).
+P1=378, P2=413, turn 2.
+Invalid move: not a valid word or cannot be played there.
+!Player 2: 421 points
