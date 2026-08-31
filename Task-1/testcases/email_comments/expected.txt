@@ -1,0 +1,4 @@
+# Comments are stripped; tag removed from the mailbox
+The email fu(happy)n+things@yahoo.com is valid.
+Mailbox: fun
+Domain: yahoo.com

@@ -1,4 +1,4 @@
-# Task 2 (Mini Scrabble)
+# Task 2 (Scrabble)
 
 ## Focus/Aims
 
@@ -141,7 +141,7 @@ Rules:
 
 ### Part A
 
-#### 1. `void sort_rack(Player* player)`
+#### i) `void sort_rack(Player* player)`
 
 Sort the player's rack in alphabetical order, in place. The wildcard `*` sorts **after** `Z`.
 
@@ -154,7 +154,7 @@ Insertion sort is the easiest:
 
 (You may use any sorting algorithm you like, insertion is just the simplest.)
 
-#### 2. `int exchange_tiles(Game* game, Player* player, const char* tiles)`
+#### ii) `int exchange_tiles(Game* game, Player* player, const char* tiles)`
 
 Exchange some of the player's tiles for new ones from the bag.
 
@@ -164,7 +164,7 @@ Exchange some of the player's tiles for new ones from the bag.
 
 > Tip: `draw_tile()` adds a tile to the rack; `add_tile()` puts a tile back into the bag.
 
-#### 3. `int word_score(Game* game, const char* word, int row, int col, char direction)`
+#### iii) `int word_score(Game* game, const char* word, int row, int col, char direction)`
 
 Assume the word is already valid and playable, and just calculate its score.
 
@@ -174,7 +174,7 @@ Assume the word is already valid and playable, and just calculate its score.
 - Add **+50** (the *bingo* bonus) if the play uses all **7** rack tiles.
 - Return the final score.
 
-#### 4. `int play_valid_word(Game* game, Player* player, const char* word, int row, int col, char direction)`
+#### iv) `int play_valid_word(Game* game, Player* player, const char* word, int row, int col, char direction)`
 
 Validate and, if legal, play the word. Return **1** on success, **0** if it cannot be played.
 
@@ -196,14 +196,14 @@ If valid:
 
 ### Part B (Bonus)
 
-#### 1. `void anagram_finder(Player* player)`
+#### v) `void anagram_finder(Player* player)`
 
 Find and print every valid word that can be made using only the tiles on the rack (a wildcard can be any letter).
 
 - Print them in order of **length (descending)**, then **alphabetically**.
 - Wildcards are shown as the **lowercase** letter they represent.
 
-#### 1. `char* highest_score(Game* game, Player* player)`
+#### vi) `char* highest_score(Game* game, Player* player)`
 
 Find the highest-scoring legal next move for the player.
 
@@ -224,7 +224,8 @@ gcc main.c Task2.c given.c lib/dict.c -o main "-Wl,--stack,2097152"
 Run the automated test suite to check your work:
 
 ```text
-powershell -ExecutionPolicy Bypass -File run_tests.ps1
+powershell -ExecutionPolicy Bypass -File run_tests.ps1   # Windows
+bash run_tests.sh                                         # macOS / Linux
 ```
 
 You can also load a prepared board with the `LOAD` menu option (see `testcases/` and `example_state.txt`) to debug specific positions. The game menu options map to the functions as follows:

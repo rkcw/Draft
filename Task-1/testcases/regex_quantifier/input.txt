@@ -1,0 +1,10 @@
+3
+6
+bat
+bath
+baths
+b
+ba
+battles
+b[a-z]{2,3}
+0

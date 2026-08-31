@@ -1,0 +1,4 @@
+# Quoted local-part: escapes are removed, mailbox taken literally
+The email "h$>>o\"WOrld\\"@gmail.com is valid.
+Mailbox: h$>>o"WOrld\
+Domain: gmail.com

@@ -1,0 +1,4 @@
+# Inside quotes, '(n)' and '+' are literal, not comment/tag
+The email "foo+bar(n)"@abc.co.uk is valid.
+Mailbox: foo+bar(n)
+Domain: abc.co.uk

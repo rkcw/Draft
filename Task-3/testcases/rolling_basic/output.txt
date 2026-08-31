@@ -1,0 +1,20 @@
+Task 3 Functions:
+1: Rolling Average
+2: Kalman Filter
+3: Kernel Convolution
+4: Median Filter (Bonus)
+0: Quit
+Please choose an option: Please enter the number of readings: Please enter the readings: Please enter the window size: Rolling average (window 3):
+Index Reading   Average
+0     1.00      1.00
+1     2.00      1.50
+2     3.00      2.00
+3     4.00      3.00
+4     5.00      4.00
+Task 3 Functions:
+1: Rolling Average
+2: Kalman Filter
+3: Kernel Convolution
+4: Median Filter (Bonus)
+0: Quit
+Please choose an option: Terminating program...

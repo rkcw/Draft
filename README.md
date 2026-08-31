@@ -36,7 +36,7 @@ Here are the following tasks and their respective topics:
 - [Task 2](./Task-2/README.md):
   - Scrabble
 - [Task 3](./Task-3/README.md):
-  - Simple Convolutional Neural Network
+  - Mathematical Models
 
 ## Grading
 

@@ -1,0 +1,7 @@
+# Quantifier {2,3}: b[a-z]{2,3} matches bat and bath only
+Regex = b[a-z]{2,3}
+Results:
+bat
+bath
+!baths
+!battles

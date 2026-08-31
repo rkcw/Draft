@@ -1,0 +1,17 @@
+Task 1 Functions:
+1: Password Check
+2: Email Check
+3: Regex
+0: Quit
+Please choose an option: Please enter the number of words: Please enter the words (one per line):
+Please enter a regex: Regex = (do)+g
+Results:
+dog
+dodog
+dododog
+Task 1 Functions:
+1: Password Check
+2: Email Check
+3: Regex
+0: Quit
+Please choose an option: Terminating program...

@@ -1,0 +1,3 @@
+# Top-level domain must be all letters and at least 2 chars
+The email hello@world.123 is invalid.
+!Mailbox:

@@ -1,0 +1,3 @@
+# Too short / missing categories / invalid character / too long - all rejected
+Password is invalid.
+!Password is valid.

@@ -1,0 +1,14 @@
+Task 1 Functions:
+1: Password Check
+2: Email Check
+3: Regex
+0: Quit
+Please choose an option: Please enter an email to check: The email username+tag@email.com is valid.
+Mailbox: username
+Domain: email.com
+Task 1 Functions:
+1: Password Check
+2: Email Check
+3: Regex
+0: Quit
+Please choose an option: Terminating program...

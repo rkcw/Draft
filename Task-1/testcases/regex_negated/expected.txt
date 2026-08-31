@@ -1,0 +1,8 @@
+# Negated set: c[^a]t rejects 'cat'
+Regex = c[^a]t
+Results:
+cut
+cot
+cbt
+c0t
+!cat

@@ -1,0 +1,11 @@
+# Dot (wildcard) and star: matches cat cot cut cart content only
+Regex = c.*t
+Results:
+cat
+cot
+cut
+cart
+content
+!cow
+!mop
+!mart

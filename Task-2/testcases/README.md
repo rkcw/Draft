@@ -3,7 +3,8 @@
 Each subfolder is one automated test. Run all of them from the `Task-2` folder:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File run_tests.ps1
+powershell -ExecutionPolicy Bypass -File run_tests.ps1   # Windows
+bash run_tests.sh                                         # macOS / Linux
 ```
 
 The runner rebuilds `main.exe` first, so tests always exercise the current code.
@@ -14,7 +15,8 @@ The runner rebuilds `main.exe` first, so tests always exercise the current code.
 |------|---------|
 | `state.txt` | A board state, loaded with the `LOAD` menu option (see `example_state.txt` for the format). |
 | `input.txt` | The exact stdin script fed to the game (e.g. `LOAD`, then `HIGH`, `PLAY ...`, `QUIT`). |
-| `expected.txt` | Output expectations. One required substring per line; a leading `!` means that substring must **not** appear. Lines starting with `#` are comments. |
+| `output.txt` | The **exact output** produced by the reference solution for that `input.txt`. The solution file is not given to students, so this is the reference to compare your program's output against. |
+| `expected.txt` | The automated checks derived from `output.txt`. One required substring per line; a leading `!` means that substring must **not** appear. Lines starting with `#` are comments. |
 
 The `state.txt` path inside `input.txt` is relative to the `Task-2` folder (where the game must run so it can find `lib/CSW24.txt`).
 

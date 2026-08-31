@@ -1,0 +1,7 @@
+# Window larger than the data - prefix averages
+Rolling average (window 6):
+Index Reading   Average
+0     2.00      2.00
+1     4.00      3.00
+2     6.00      4.00
+3     8.00      5.00

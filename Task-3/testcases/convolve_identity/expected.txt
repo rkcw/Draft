@@ -1,0 +1,4 @@
+# Identity kernel -> output identical to the input
+Matrix (2 x 2):
+1.00 0.00
+0.00 1.00

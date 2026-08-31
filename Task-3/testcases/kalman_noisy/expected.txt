@@ -1,0 +1,7 @@
+# The README example - estimate blends toward each measurement
+Kalman filter output:
+Step 1: measurement 0.50 -> estimate 0.26
+Step 2: measurement 1.20 -> estimate 0.62
+Step 3: measurement 1.00 -> estimate 0.75
+Step 4: measurement 2.00 -> estimate 1.12
+Step 5: measurement 2.50 -> estimate 1.51

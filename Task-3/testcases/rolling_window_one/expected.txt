@@ -1,0 +1,9 @@
+# Window 1 - every average is the reading itself
+Rolling average (window 1):
+Index Reading   Average
+0     10.00     10.00
+1     12.50     12.50
+2     14.00     14.00
+3     16.50     16.50
+4     18.00     18.00
+5     20.50     20.50

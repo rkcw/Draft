@@ -1,0 +1,7 @@
+# Constant measurements - estimate converges toward 5
+Kalman filter output:
+Step 1: measurement 5.00 -> estimate 2.62
+Step 2: measurement 5.00 -> estimate 3.53
+Step 3: measurement 5.00 -> estimate 4.01
+Step 4: measurement 5.00 -> estimate 4.31
+Step 5: measurement 5.00 -> estimate 4.50

@@ -3,6 +3,8 @@
 # For each folder in testcases/ :
 #   state.txt      - board state loaded via the LOAD menu option
 #   input.txt      - the exact stdin script fed to the game
+#   output.txt     - the exact output of the reference solution for input.txt,
+#                    so students can see the intended output (solution not given)
 #   expected.txt   - one required output substring per line; a line starting
 #                    with '!' is a substring that must NOT appear. Lines
 #                    starting with '#' are comments and are ignored.

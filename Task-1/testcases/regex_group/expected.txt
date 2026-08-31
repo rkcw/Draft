@@ -1,0 +1,8 @@
+# Group with plus: (do)+g matches repeated 'do' blocks
+Regex = (do)+g
+Results:
+dog
+dodog
+dododog
+!dg
+!dag

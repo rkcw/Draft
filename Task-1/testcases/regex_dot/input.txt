@@ -1,0 +1,12 @@
+3
+8
+cat
+cot
+cow
+cut
+mop
+mart
+cart
+content
+c.*t
+0

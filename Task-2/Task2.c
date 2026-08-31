@@ -9,7 +9,7 @@
 
 //You are allowed to define helpers in this file to assist you in implementing the required functions. However, you are NOT allowed to modify the function signatures of the provided functions in Task2.h.
 
-// PART A
+// PART A (MANDATORY)
 
 /*
 Task: Implement a simple insertion sort to sort the player's rack in alphabetical order. This function should modify the player's rack in place. The wildcard * should come after Z in the rack.
@@ -62,7 +62,7 @@ int play_valid_word(Game* game, Player* player, const char* word, int row, int c
 
 
 
-//PART B
+//PART B (OPTIONAL)
 
 /*
 Task: Implement a function to find all words a player can play using only the tiles on their rack.
@@ -81,4 +81,5 @@ And returns the highest scoring move as a string.
 
 char* highest_score(Game* game, Player* player) {
     //TODO for the student.
+    return "PASS";
 }

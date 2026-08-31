@@ -1,0 +1,19 @@
+Task 3 Functions:
+1: Rolling Average
+2: Kalman Filter
+3: Kernel Convolution
+4: Median Filter (Bonus)
+0: Quit
+Please choose an option: Please enter the initial estimate: Please enter the initial error covariance: Please enter the number of measurements: Please enter the measurements: Please enter the process noise Q: Please enter the measurement noise R: Kalman filter output:
+Step 1: measurement 5.00 -> estimate 2.62
+Step 2: measurement 5.00 -> estimate 3.53
+Step 3: measurement 5.00 -> estimate 4.01
+Step 4: measurement 5.00 -> estimate 4.31
+Step 5: measurement 5.00 -> estimate 4.50
+Task 3 Functions:
+1: Rolling Average
+2: Kalman Filter
+3: Kernel Convolution
+4: Median Filter (Bonus)
+0: Quit
+Please choose an option: Terminating program...

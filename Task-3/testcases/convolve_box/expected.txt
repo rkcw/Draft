@@ -1,0 +1,5 @@
+# 5x5 input with an all-ones 3x3 kernel -> 3x3 sum-of-window output
+Matrix (3 x 3):
+14.00 16.00 14.00
+16.00 19.00 16.00
+14.00 16.00 14.00

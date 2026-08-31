@@ -1,0 +1,10 @@
+3
+6
+cat
+cut
+cot
+cbt
+c0t
+ct
+c[^a]t
+0

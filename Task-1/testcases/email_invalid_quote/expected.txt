@@ -1,0 +1,3 @@
+# A '"' inside a quoted local-part must be escaped
+The email "l"l"@email.com is invalid.
+!Mailbox:

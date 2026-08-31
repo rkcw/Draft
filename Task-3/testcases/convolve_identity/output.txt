@@ -1,0 +1,18 @@
+Task 3 Functions:
+1: Rolling Average
+2: Kalman Filter
+3: Kernel Convolution
+4: Median Filter (Bonus)
+0: Quit
+Please choose an option: Please enter the input rows and cols: Please enter the input matrix (4 x 4):
+Please enter the kernel size: Please enter the kernel (3 x 3):
+Matrix (2 x 2):
+1.00 0.00
+0.00 1.00
+Task 3 Functions:
+1: Rolling Average
+2: Kalman Filter
+3: Kernel Convolution
+4: Median Filter (Bonus)
+0: Quit
+Please choose an option: Terminating program...

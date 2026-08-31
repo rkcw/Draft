@@ -1,0 +1,4 @@
+# Tag is removed from the mailbox
+The email username+tag@email.com is valid.
+Mailbox: username
+Domain: email.com

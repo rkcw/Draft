@@ -1,0 +1,4 @@
+# Unquoted local-part and domain are case-insensitive, output is lowercased
+The email HelloWorld@Email.Com is valid.
+Mailbox: helloworld
+Domain: email.com

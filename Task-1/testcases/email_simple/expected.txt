@@ -1,0 +1,4 @@
+# Basic valid email
+The email username@email.com is valid.
+Mailbox: username
+Domain: email.com

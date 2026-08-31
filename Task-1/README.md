@@ -7,7 +7,6 @@ This task will focus on testing your skills on:
 - Basic C (loop and if conditions)
 - Array Manipulation
 - C String
-- Pointers
 
 This task is mainly focused ~~(loosely based)~~ on data validation (Similar concepts will be very useful when you deal with sensors later on).
 
@@ -297,3 +296,30 @@ bath
 
 - All strings within list only contain small Latin letters (aka lowercase letters, a-z).
 - You may assume that the list and regex will not be empty, and the regex is always valid (no incorrect syntax).
+
+## Compiling & Testing
+
+Compile (from the `Task-1` folder) with your `Task1.c`:
+
+```text
+gcc main.c Task1.c -o main
+```
+
+(To run the reference solution instead, swap `Task1.c` for `Task1sol.c`.)
+
+Run the automated test suite to check your work:
+
+```text
+powershell -ExecutionPolicy Bypass -File run_tests.ps1   # Windows
+bash run_tests.sh                                         # macOS / Linux
+```
+
+Each test folder in `testcases/` ships with the exact scripted input (`input.txt`) **and** the exact output produced by the reference solution (`output.txt`). Since the solution file is not given to you, use `output.txt` as the reference to compare your program's output against.
+
+The menu options map to the functions as follows:
+
+| Menu option | Function used |
+| ------------- | --------------- |
+| `1` | `password_check` |
+| `2` | `email_check` |
+| `3` | `regex` |

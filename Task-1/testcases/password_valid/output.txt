@@ -1,0 +1,12 @@
+Task 1 Functions:
+1: Password Check
+2: Email Check
+3: Regex
+0: Quit
+Please choose an option: Please enter a password to check: Password is valid.
+Task 1 Functions:
+1: Password Check
+2: Email Check
+3: Regex
+0: Quit
+Please choose an option: Terminating program...

@@ -1,4 +1,7 @@
-//You do not have to change anything in this file. You will not be required to submit this file
+//You do not have to change anything in this file. You will not be required to submit this file.
+//Compile (from the Task-1 folder) with your Task1.c:
+//   gcc main.c Task1.c -o main
+//(To run the reference solution instead, swap Task1.c for Task1sol.c.)
 #include "Task1.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -8,18 +11,25 @@ enum tasks{
     PASSWORD,
     EMAIL,
     REGEX,
-    BULK_CHECK,
     FUNC_COUNT,
 };
 
 
 
+//Removes a trailing '\r' (left over when the input file uses CRLF line endings),
+//so scanf("%[^\n]", ...) does not accidentally store it inside the string.
+void trim_cr(char* s){
+    int len=0;
+    while(s[len]!='\0') len++;
+    if(len>0 && s[len-1]=='\r') s[len-1]='\0';
+}
+
 int main(){
     while(1){
         printf("Task 1 Functions:\n");
-        for(int i=1;i<FUNC_COUNT;i++){
-            printf("%d:\n",i);
-        }
+        printf("1: Password Check\n");
+        printf("2: Email Check\n");
+        printf("3: Regex\n");
         printf("0: Quit\n");
         int valid=0;
         for(;valid==0;){
@@ -34,6 +44,7 @@ int main(){
                     printf("Please enter a password to check: ");
                     scanf("%[^\n]", password);
                     getchar();
+                    trim_cr(password);
                     int is_valid=password_check(password);
                     if(is_valid) {
                         printf("Password is valid.\n");
@@ -47,22 +58,36 @@ int main(){
                     printf("Please enter an email to check: ");
                     scanf("%[^\n]", email);
                     getchar();
+                    trim_cr(email);
                     email_check(email);
                     break;
-                case REGEX:
+                case REGEX: {
                     valid=1;
-                    char rex[500];
-                    char* list[500];
-                    printf("Please enter a regex: ");
-                    scanf("%[^\n]", regex);
+                    char words[500][64];
+                    char* list[501];
+                    int count=0;
+                    printf("Please enter the number of words: ");
+                    scanf("%d", &count);
                     getchar();
+                    printf("Please enter the words (one per line):\n");
+                    for(int i=0;i<count;i++){
+                        scanf("%63s", words[i]);
+                    }
+                    getchar();
+                    for(int i=0;i<count;i++){
+                        list[i]=words[i];
+                    }
+                    list[count]=NULL;
+                    char rex[500];
+                    printf("Please enter a regex: ");
+                    scanf("%[^\n]", rex);
+                    getchar();
+                    trim_cr(rex);
                     regex(list, rex);
                     break;
-                case BULK_CHECK:
-                    valid=1;
-                    break;
+                }
                 case QUIT:
-                    printf("Terminating program...");
+                    printf("Terminating program...\n");
                     return 0;
                 default:
                     printf("Not a valid option, please choose again.\n");

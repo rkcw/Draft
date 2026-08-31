@@ -1,0 +1,5 @@
+# Lone 9 outlier removed; zero-padded border becomes 0.00
+Matrix (3 x 3):
+0.00 1.00 0.00
+1.00 1.00 1.00
+0.00 1.00 0.00

@@ -1,0 +1,20 @@
+Task 3 Functions:
+1: Rolling Average
+2: Kalman Filter
+3: Kernel Convolution
+4: Median Filter (Bonus)
+0: Quit
+Please choose an option: Please enter the rows and cols: Please enter the input matrix (5 x 5):
+Please enter the window size: Matrix (5 x 5):
+0.00 2.00 3.00 4.00 0.00
+2.00 7.00 8.00 9.00 5.00
+7.00 12.00 13.00 14.00 10.00
+12.00 17.00 18.00 19.00 15.00
+0.00 17.00 18.00 19.00 0.00
+Task 3 Functions:
+1: Rolling Average
+2: Kalman Filter
+3: Kernel Convolution
+4: Median Filter (Bonus)
+0: Quit
+Please choose an option: Terminating program...
