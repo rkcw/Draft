@@ -5,12 +5,12 @@
 
 ## Homework Format
 
-There will be ***3*** main homework tasks, each focusing on a different topic.  
+There will be **3** main homework tasks, each focusing on a different topic.  
 All tasks will be split into part A and part B: (so there's a 1A, 1B, 2A, 2B, 3A, and 3B)
 
-- Part A \(***MANDATORY***\):
+- Part A \(**MANDATORY**\):
   - These questions will be marked, and will affect your eligibility of going to later phases.
-- Part B \(***OPTIONAL/BONUS***</u>\):
+- Part B \(**OPTIONAL/BONUS**</u>\):
   - These are extended tasks that are related to the topic.
   - As these tasks might be way too hard, they will only act as further reference. They will be marked if you attempt them, but will **NOT** give you any additional points or whatsoever.
 
