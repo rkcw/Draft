@@ -1,16 +1,16 @@
 # Robotics SW Tutorial 2025 Programming Assignment
 
-> Author: Ryan (<rcwku@connect.ust.hk>)
+> Author: Ryan (<rcwku@connect.ust.hk>)  
 > Feel free to email/discord dm me for any clarifications on the homework.
 
 ## Homework Format
 
-There will be ***3*** main homework tasks, each focusing on a different topic.
+There will be ***3*** main homework tasks, each focusing on a different topic.  
 All tasks will be split into part A and part B: (so there's a 1A, 1B, 2A, 2B, 3A, and 3B)
 
-- Part A \(<u>***MANDATORY***</u>\):
+- Part A \(***MANDATORY***\):
   - These questions will be marked, and will affect your eligibility of going to later phases.
-- Part B \(<u>***OPTIONAL/BONUS***</u>\):
+- Part B \(***OPTIONAL/BONUS***</u>\):
   - These are extended tasks that are related to the topic.
   - As these tasks might be way too hard, they will only act as further reference. They will be marked if you attempt them, but will **NOT** give you any additional points or whatsoever.
 
@@ -41,3 +41,5 @@ Here are the following tasks and their respective topics:
 ## Grading
 
 >It is completely fine to not be able to complete the homework, as it is designed to be difficult, and pushes the limits of your limited knowledge.
+
+TBA
