@@ -1,4 +1,4 @@
-# Robotics SW Tutorial 2025 Programming Assignment
+# Robotics SW Tutorial 2026 Programming Assignment
 
 > Author: Ryan (<rcwku@connect.ust.hk>)  
 > Feel free to email/discord dm me for any clarifications on the homework.
